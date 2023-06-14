@@ -1,5 +1,4 @@
 {% load static %}
-{% block content %}
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -16,10 +15,11 @@
           <h1>Subscribe Us</h1>
         </header>
         <section>
-
+{% block content %}
           <p>
            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
+{% endblock content %}
 
         </section>
         <footer>
@@ -33,4 +33,3 @@
   
 </body>
 </html>
-{% endblock content %}

@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import About, Comment, ClientLogo, Education, Experince, Portfolio, Skills, Category, Service, Blog
-
 def about(request):
     about = About.objects.all()
     comments = Comment.objects.all()
@@ -38,3 +37,4 @@ def project_detail(request, pk):
 
 def test (request):
     return render(request, "abduazim/test.html")
+

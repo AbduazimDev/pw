@@ -1,5 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
+
 
 class About(models.Model):
     name = models.CharField(max_length=250)
@@ -80,7 +82,7 @@ class Service(models.Model):
 class Blog(models.Model):
     date = models.DateField()
     title = models.CharField(max_length=500)
-    blog = RichTextField()
+    blog = RichTextUploadingField()
     shortblog = models.CharField(max_length=250)
     picture = models.ImageField(null=True, blank=True, upload_to=".")
 
